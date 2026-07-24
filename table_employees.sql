@@ -150,7 +150,7 @@ UPDATE Employees SET Salary = TRIM(REPLACE(REPLACE(Salary,'$', ''), ',',''));
 
 
 -- Cambiar el tipo de dato de Salary, varchar a Decimal. 
-FROM Employees  
+select * FROM Employees  
 WHERE TRY_CAST(Salary AS DECIMAL(10,2)) IS NULL AND Salary IS NOT NULL;
 
 ALTER TABLE Employees
